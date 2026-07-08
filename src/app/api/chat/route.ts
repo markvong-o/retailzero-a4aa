@@ -22,7 +22,7 @@ const anthropic = createAnthropic({
   apiKey: process.env.IDDB_LLM_KEY,
 });
 
-const chatModel = anthropic("claude-4-6-opus");
+const chatModel = anthropic("claude-haiku-4-5");
 
 export async function POST(request: Request) {
   const {
