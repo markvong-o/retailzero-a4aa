@@ -190,12 +190,12 @@ export function TokenViewer() {
           )}
 
           {/* Expiry info */}
-          {active.decoded?.exp && (
+          {active.decoded?.exp != null && (
             <p className="text-xs text-muted-foreground">
               Expires: {new Date((active.decoded.exp as number) * 1000).toLocaleString()}
             </p>
           )}
-          {active.decoded?.expires_at && (
+          {active.decoded?.expires_at != null && (
             <p className="text-xs text-muted-foreground">
               Expires: {new Date(active.decoded.expires_at as string).toLocaleString()}
             </p>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Auth0 for AI Agents — Talk Track Visuals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neutral-100: #FBFBFA;
+      --purple-100:  #EBD3FF;
+      --purple-200:  #BC6DFF;
+      --purple-300:  #9921FE;
+      --purple-400:  #490186;
+      --purple-500:  #20003A;
+      --orange-300:  #FF6217;
+      --font-display: 'DM Sans', 'Aeonik', Inter, system-ui, sans-serif;
+      --font-mono:    'DM Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; min-height: 100%; background: #07000f; color: var(--neutral-100); font-family: var(--font-display); }
+    .page { max-width: 1280px; margin: 0 auto; padding: 64px 32px 96px; }
+    h1 { font-size: clamp(28px, 3.4vw, 48px); font-weight: 700; letter-spacing: -.02em; margin: 0 0 8px; }
+    .eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--purple-200); margin-bottom: 18px; }
+    .lede { color: var(--purple-100); max-width: 680px; line-height: 1.5; margin: 0 0 48px; opacity: .85; }
+    .grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .card {
+      background: linear-gradient(180deg, rgba(153,33,254,.08), rgba(153,33,254,.02));
+      border: 1px solid rgba(188,109,255,.22);
+      border-radius: 18px;
+      padding: 22px;
+      text-decoration: none; color: inherit;
+      transition: transform 300ms cubic-bezier(.2,.8,.2,1), border-color 300ms ease, background 300ms ease;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .card:hover { transform: translateY(-4px); border-color: rgba(188,109,255,.55); background: linear-gradient(180deg, rgba(153,33,254,.14), rgba(153,33,254,.04)); }
+    .card .num { font-family: var(--font-mono); font-size: 11px; letter-spacing: .22em; color: var(--purple-200); }
+    .card h2 { margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -.01em; }
+    .card p { margin: 0; color: var(--purple-100); opacity: .82; line-height: 1.5; font-size: 14px; }
+    .card .meta { display: flex; gap: 12px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: rgba(235,211,255,.55); }
+    .card .meta span { display: inline-block; padding: 4px 8px; border: 1px solid rgba(235,211,255,.18); border-radius: 999px; }
+
+    .thumb {
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      background: var(--purple-500);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.04);
+    }
+    .thumb::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(235,211,255,.06) 1px, transparent 1px);
+      background-size: 20px 20px;
+      mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 75%);
+    }
+    .thumb-content {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 8px;
+    }
+    .thumb-svg { width: 56px; height: 70px; color: var(--neutral-100); }
+    .thumb-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .22em; color: var(--purple-200); text-transform: uppercase; }
+
+    .footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(188,109,255,.18);
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em;
+      color: rgba(235,211,255,.5); text-transform: uppercase;
+    }
+    .footer a { color: var(--purple-200); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="eyebrow">Talk Track Visuals</div>
+    <h1>Auth0 for AI Agents — Teaser Sequence</h1>
+    <p class="lede">Two hyperframe-driven HTML scenes built on the new Auth0 palette. Each scene loads as its own playable timeline. Click a card to open it. Each preview includes Replay and frame markers for editor handoff.</p>
+
+    <div class="grid">
+      <a class="card" href="intro.html">
+        <div class="thumb">
+          <div class="thumb-content">
+            <svg class="thumb-svg" viewBox="0 0 64 80" aria-hidden="true">
+              <path d="M32 4 L60 16 L60 38 C60 52 47 62 32 64 C17 62 4 52 4 38 L4 16 Z" fill="currentColor"/>
+              <path d="M32 12 L52 21 L52 38 C52 48 42 56 32 58 C22 56 12 48 12 38 L12 21 Z" fill="#20003A"/>
+              <path d="M32 24 L42 46 L22 46 Z" fill="currentColor"/>
+            </svg>
+            <div class="thumb-label">Identity for AI Agents</div>
+          </div>
+        </div>
+        <div class="num">// 01</div>
+        <h2>Intro</h2>
+        <p>A pulse of light across a dark stage. The Auth0 shield assembles via a stroked outline, fills, then resolves with the wordmark and a tagline. Pre-roll for the talk-track.</p>
+        <div class="meta"><span>5.4s</span><span>6 frames</span></div>
+      </a>
+
+      <a class="card" href="outro.html">
+        <div class="thumb">
+          <div class="thumb-content">
+            <svg class="thumb-svg" viewBox="0 0 64 80" aria-hidden="true">
+              <path d="M32 4 L60 16 L60 38 C60 52 47 62 32 64 C17 62 4 52 4 38 L4 16 Z" fill="currentColor"/>
+              <path d="M32 12 L52 21 L52 38 C52 48 42 56 32 58 C22 56 12 48 12 38 L12 21 Z" fill="#20003A"/>
+              <path d="M32 24 L42 46 L22 46 Z" fill="currentColor"/>
+            </svg>
+            <div class="thumb-label">Auth0 for AI Agents</div>
+          </div>
+        </div>
+        <div class="num">// 02</div>
+        <h2>Outro</h2>
+        <p>A horizon line and light sweep set the close. The Auth0 shield stamps into being with a shockwave ring. Wordmark and tagline resolve, then the lockup fades to black. No CTA, no recap.</p>
+        <div class="meta"><span>5.8s</span><span>7 frames</span></div>
+      </a>
+    </div>
+
+    <div class="footer">
+      Hyperframes · Smart Animate · Auth0 palette · DM Sans + DM Mono · See <a href="figma-hyperframes-spec.md">figma-hyperframes-spec.md</a> for native rebuild instructions.
+    </div>
+  </div>
+</body>
+</html>
