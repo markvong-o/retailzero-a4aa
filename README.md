@@ -403,8 +403,8 @@ This app routes Anthropic requests through a LiteLLM proxy.
 2. Go to **Virtual Keys** and click **+ Generate New Key**.
 3. Give the key a descriptive name (e.g. `retail-a4aa-local`).
 4. Under model access, ensure **claude-4-6-opus** is enabled -- the app hardcodes this model. Set budget limits as desired, then click **Generate**.
-5. Copy the generated key (starts with `sk-...`) and use it as `ANTHROPIC_API_KEY` in your `.env.local`.
-6. Set `ANTHROPIC_BASE_URL` to the LiteLLM proxy base URL (without the trailing `/v1` -- the app appends it automatically).
+5. Copy the generated key (starts with `sk-...`) and use it as `IDDB_LLM_KEY` in your `.env.local`.
+6. Set `IDDB_LLM_BASE_URL` to the LiteLLM proxy's OpenAI-compatible `/v1` endpoint (include the trailing `/v1` -- the app uses it as-is).
 
 ## 7. Generate AUTH0_SECRET
 
@@ -439,8 +439,8 @@ AUTH0_AUDIENCE=https://api.retailzero.com
 APP_BASE_URL=http://localhost:3000
 
 # LLM (Anthropic via LiteLLM)
-ANTHROPIC_BASE_URL=
-ANTHROPIC_API_KEY=
+IDDB_LLM_BASE_URL=
+IDDB_LLM_KEY=
 
 # FGA
 FGA_STORE_ID=

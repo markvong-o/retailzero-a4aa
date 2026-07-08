@@ -18,8 +18,8 @@ import { auth0 } from "@/lib/auth/auth0";
 export const maxDuration = 300;
 
 const anthropic = createAnthropic({
-  baseURL: `${process.env.ANTHROPIC_BASE_URL}/v1`,
-  apiKey: process.env.ANTHROPIC_API_KEY,
+  baseURL: process.env.IDDB_LLM_BASE_URL,
+  apiKey: process.env.IDDB_LLM_KEY,
 });
 
 const chatModel = anthropic("claude-4-6-opus");

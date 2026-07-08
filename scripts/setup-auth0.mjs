@@ -422,16 +422,16 @@ async function main() {
   log("info", "LLM/Anthropic config (optional). Leave blank to skip.");
 
   const anthropicBaseUrl = await prompt(
-    "Anthropic Base URL",
-    process.env.SETUP_ANTHROPIC_BASE_URL || ""
+    "LiteLLM Base URL (OpenAI-compatible /v1 endpoint)",
+    process.env.SETUP_IDDB_LLM_BASE_URL || ""
   );
   const anthropicApiKey = anthropicBaseUrl
-    ? await promptSecret("Anthropic API Key")
+    ? await promptSecret("LiteLLM API Key")
     : "";
 
   if (anthropicBaseUrl) {
-    credentials.ANTHROPIC_BASE_URL = anthropicBaseUrl;
-    credentials.ANTHROPIC_API_KEY = anthropicApiKey;
+    credentials.IDDB_LLM_BASE_URL = anthropicBaseUrl;
+    credentials.IDDB_LLM_KEY = anthropicApiKey;
   }
 
   // ── Phase 2: Validate & Get Management Token ──
@@ -816,9 +816,9 @@ async function main() {
     "# Google Calendar",
     `GOOGLE_CALENDAR_ID=${credentials.GOOGLE_CALENDAR_ID || ""}`,
     "",
-    "# LLM (Anthropic)",
-    `ANTHROPIC_BASE_URL=${credentials.ANTHROPIC_BASE_URL || ""}`,
-    `ANTHROPIC_API_KEY=${credentials.ANTHROPIC_API_KEY || ""}`,
+    "# LLM (Anthropic via LiteLLM)",
+    `IDDB_LLM_BASE_URL=${credentials.IDDB_LLM_BASE_URL || ""}`,
+    `IDDB_LLM_KEY=${credentials.IDDB_LLM_KEY || ""}`,
   ].join("\n") + "\n";
 
   const envPath = resolve(PROJECT_ROOT, ".env.local");
