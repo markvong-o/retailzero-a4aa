@@ -1,5 +1,6 @@
 FROM 753968715979.dkr.ecr.us-west-2.amazonaws.com/iddb-app-base:node-latest AS build
 WORKDIR /app
+USER root
 
 RUN set -eu; n=5; i=0; \
     until timeout 120 apk add --no-cache python-3.14 build-base; do \
